@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+:root {
+  --bg:#fdebf2; --panel:#fff; --olive:#a7bf74; --olive-dark:#90ac61;
+  --text:#413c41; --muted:#8e8a8e; --accent:#ff7da6; --shadow:0 10px 25px rgba(0,0,0,.07);
+}
+html,body{height:100%;margin:0;font-family:'Poppins',system-ui;background:linear-gradient(180deg,#fff6fb,var(--bg));color:var(--text);}
+.app{max-width:720px;margin:40px auto;padding:24px;background:var(--panel);border-radius:24px;box-shadow:var(--shadow);border:1px solid #f3e1ea;}
+
+.top{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:center;margin-bottom:18px;}
+.date-card{background:var(--olive);color:#fff;border-radius:18px;padding:16px;box-shadow:var(--shadow);}
+.day-name{font-weight:700;font-size:18px;}
+.day-month{display:flex;gap:6px;align-items:baseline;}
+.day-number{font-size:28px;font-weight:700;}
+.month-name{font-size:16px;opacity:.95;}
+
+.progress-card{background:#fff;border:2px dashed #f0cddc;padding:14px 16px;border-radius:18px;}
+.progress-title{font-weight:700;margin-bottom:8px;}
+.progress-bar{position:relative;width:100%;height:14px;background:#f3e1ea;border-radius:999px;overflow:hidden;margin-bottom:8px;}
+.progress-fill{position:absolute;inset:0 100% 0 0;background:linear-gradient(90deg,var(--olive-dark),var(--olive));transition:width .25s ease;border-radius:999px;}
+.progress-label{font-size:13px;color:var(--muted);}
+
+.add{display:grid;grid-template-columns:1fr 130px;gap:10px;margin:10px 0 6px;}
+.add input{padding:14px 16px;border:2px solid #f0cddc;border-radius:14px;outline:none;font-size:15px;}
+.add input:focus{border-color:var(--accent);}
+.btn{background:#ffc1d7;border:none;padding:12px 14px;border-radius:14px;font-weight:700;cursor:pointer;box-shadow:var(--shadow);}
+
+.list h2{font-size:16px;margin:12px 0 8px;}
+.tasks{display:grid;gap:10px;}
+.task{display:grid;grid-template-columns:28px 1fr 30px;align-items:center;gap:10px;background:#f6fbe9;padding:12px;border-radius:14px;border:2px solid #e3f0c5;box-shadow:var(--shadow);}
+.task input[type="checkbox"]{width:20px;height:20px;accent-color:var(--olive);}
+.task span{font-size:14px;}
+.task button.remove{background:transparent;border:none;width:26px;height:26px;border-radius:8px;font-size:18px;cursor:pointer;color:#c15a7b;}
+.task button.remove:hover{background:#ffe5ef;}
+.task.done span{text-decoration:line-through;color:var(--muted);}
