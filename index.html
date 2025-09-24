@@ -1,1 +1,41 @@
-# To-do-list-WIDGET
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy To-Do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="date-card">
+        <div id="dayName" class="day-name">Wednesday</div>
+        <div class="day-month">
+          <span id="dayNumber" class="day-number">13</span>
+          <span id="monthName" class="month-name">August</span>
+        </div>
+      </div>
+      <div class="progress-card">
+        <div class="progress-title">Progress:</div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <div id="progress-label" class="progress-label">0 / 0 tasks done</div>
+      </div>
+    </header>
+
+    <section class="add">
+      <input id="new-task" type="text" placeholder="Input your task!" autocomplete="off" />
+      <button id="add-btn" class="btn">Add Task</button>
+    </section>
+
+    <section class="list">
+      <h2>My Tasks:</h2>
+      <div id="tasks" class="tasks"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
